@@ -26,7 +26,7 @@ diameter := radius * 2
 fixedViewDistance := viewdistance - (viewdistance // 3)
 loopamount := diameter // 16 // fixedViewDistance + 2
 currentXPos := diameter * -1
-currentZPos := diamater * -1
+currentZPos := diameter * -1
 duration := (loopamount * loopamount * (1000 + tpDelay + 200) + 5000) / 60000
 MsgBox % "This will take about " . Round(duration) . " minutes."
 Sleep, 5000
