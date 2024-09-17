@@ -22,11 +22,10 @@ $^q::
 }
 
 $^p::
-diameter := radius * 2
 fixedViewDistance := viewdistance - (viewdistance // 3)
-loopamount := diameter // 16 // fixedViewDistance + 2
-currentXPos := diameter * -1
-currentZPos := diameter * -1
+loopamount := radius // 16 // fixedViewDistance + 2
+currentXPos := radius * -1
+currentZPos := radius * -1
 duration := (loopamount * loopamount * (1000 + tpDelay + 200) + 5000) / 60000
 MsgBox % "This will take about " . Round(duration) . " minutes."
 Sleep, 5000
@@ -40,7 +39,7 @@ Loop, %loopamount%
 		Sleep, tpDelay
 		currentXPos += 32 * fixedViewDistance
 	}
-	currentXPos := diameter * -1
+	currentXPos := radius * -1
 	currentZPos += 32 * fixedViewDistance
 }
 Send, t
